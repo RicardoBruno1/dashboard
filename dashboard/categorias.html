@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">LOGO</div>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <ion-icon name="home"></ion-icon>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="categorias.html">
+                        <ion-icon name="filing"></ion-icon>
+                        <span>Categoria</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="produtos.html">
+                        <ion-icon name="briefcase"></ion-icon>
+                        <span>Produtos</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="tema">
+                <ion-icon name="sunny"></ion-icon>
+                <div class="troca"></div>
+                <ion-icon name="moon"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2>
+            <div class="titulo">
+                <ion-icon class="menu-btn" name="menu"></ion-icon>Categorias
+            </div>
+            <button id="abrir"><span>Nova categoria</span></button>
+        </h2>
+        <div class="box">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Categoria</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <aside id="lateral">
+        <div class="container">
+            <form onsubmit="cadastrarCategoria()">
+                <h3>cadastro <ion-icon name="close"></ion-icon></h3>
+                <label for="categoria">Categoria</label>
+                <input type="text" id="categoria">
+                <label for="status">Status</label>
+                <select id="statu">
+                    <option value="1">Ativo</option>
+                    <option value="2">Inativo</option>
+                </select>
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </aside>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/categorias.js"></script>
+</body>
+</html>
